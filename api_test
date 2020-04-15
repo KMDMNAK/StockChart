@@ -1,0 +1,20 @@
+query($var:StockDataCondition){
+  stockdata(objects:$var){
+  date
+  OR
+  HP
+  LP
+  CR
+  DoD
+  DoDP
+  Rev
+  }
+}
+
+{
+  "var":{
+    "page":10,
+    "code":"3407",
+    "datatype":"day"
+  }
+}

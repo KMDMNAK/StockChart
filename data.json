@@ -1,0 +1,636 @@
+{
+    "data": {
+        "getTopAssistances": [
+            {
+                "code": "3407",
+                "name": "\u65ed\u5316\u6210",
+                "original_name": "\u65ed\u5316\u6210"
+            },
+            {
+                "code": "2502",
+                "name": "\u30a2\u30b5\u30d2\u30b0\u30eb\u30fc\u30d7\u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9",
+                "original_name": "\u30a2\u30b5\u30d2\u30b0\u30eb\u30fc\u30d7"
+            },
+            {
+                "code": "2802",
+                "name": "\u5473\u306e\u7d20",
+                "original_name": "\u5473\u306e\u7d20"
+            },
+            {
+                "code": "4503",
+                "name": "アステラス製薬",
+                "original_name": "アステラス製薬"
+              },
+            {
+                "code": "6857",
+                "name": "\u30a2\u30c9\u30d0\u30f3\u30c6\u30b9\u30c8",
+                "original_name": "\u30a2\u30c9\u30d0\u30f3\u30c6\u30b9\u30c8"
+            },
+            {
+                "code": "6754",
+                "name": "\u30a2\u30f3\u30ea\u30c4",
+                "original_name": "\u30a2\u30f3\u30ea\u30c4"
+            },
+            {
+                "code": "9433",
+                "name": "\uff2b\uff24\uff24\uff29",
+                "original_name": "\u30a4\u30aa\u30f3"
+            },
+            {
+                "code": "5019",
+                "name": "\u51fa\u5149\u8208\u7523",
+                "original_name": "\u51fa\u5149\u8208\u7523"
+            },
+            {
+                "code": "8001",
+                "name": "\u4f0a\u85e4\u5fe0\u5546\u4e8b",
+                "original_name": "\u4f0a\u85e4\u5fe0\u5546\u4e8b"
+            },
+            {
+                "code": "3990",
+                "name": "ＵＵＵＭ",
+                "original_name": "UUUM"
+              },
+            {
+                "code": "5201",
+                "name": "\uff21\uff27\uff23",
+                "original_name": "AGC"
+            },
+            {
+                "code": "2670",
+                "name": "\u30a8\u30fc\u30d3\u30fc\u30b7\u30fc\u30fb\u30de\u30fc\u30c8",
+                "original_name": "\u30a8\u30fc\u30d3\u30fc\u30b7\u30fc\u30fb\u30de\u30fc\u30c8"
+            },
+            {
+                "code": "6273",
+                "name": "\uff33\uff2d\uff23",
+                "original_name": "SMC"
+            },
+            {
+                "code": "9437",
+                "name": "\uff2e\uff34\uff34\u30c9\u30b3\u30e2",
+                "original_name": "NTT\u30c9\u30b3\u30e2"
+            },
+            {
+                "code": "2413",
+                "name": "\u30a8\u30e0\u30b9\u30ea\u30fc",
+                "original_name": "\u30a8\u30e0\u30b9\u30ea\u30fc"
+            },
+            {
+                "code": "6645",
+                "name": "\u30aa\u30e0\u30ed\u30f3",
+                "original_name": "\u30aa\u30e0\u30ed\u30f3"
+            },
+            {
+                "code": "4661",
+                "name": "\u30aa\u30ea\u30a8\u30f3\u30bf\u30eb\u30e9\u30f3\u30c9",
+                "original_name": "\u30aa\u30ea\u30a8\u30f3\u30bf\u30eb\u30e9\u30f3\u30c9"
+            },
+            {
+                "code": "8591",
+                "name": "\u30aa\u30ea\u30c3\u30af\u30b9",
+                "original_name": "\u30aa\u30ea\u30c3\u30af\u30b9"
+            },
+            {
+                "code": "7733",
+                "name": "\u30aa\u30ea\u30f3\u30d1\u30b9",
+                "original_name": "\u30aa\u30ea\u30f3\u30d1\u30b9"
+            },
+            {
+                "code": "4452",
+                "name": "\u82b1\u738b",
+                "original_name": "\u82b1\u738b"
+            },
+            {
+                "code": "6952",
+                "name": "\u30ab\u30b7\u30aa\u8a08\u7b97\u6a5f",
+                "original_name": "\u30ab\u30b7\u30aa\u8a08\u7b97\u6a5f"
+            },
+            {
+                "code": "9697",
+                "name": "\u30ab\u30d7\u30b3\u30f3",
+                "original_name": "\u30ab\u30d7\u30b3\u30f3"
+            },
+            {
+                "code": "2229",
+                "name": "\u30ab\u30eb\u30d3\u30fc",
+                "original_name": "\u30ab\u30eb\u30d3\u30fc"
+            },
+            {
+                "code": "7181",
+                "name": "\u304b\u3093\u307d\u751f\u547d\u4fdd\u967a",
+                "original_name": "\u304b\u3093\u307d\u751f\u547d\u4fdd\u967a"
+            },
+            {
+                "code": "6861",
+                "name": "\u30ad\u30fc\u30a8\u30f3\u30b9",
+                "original_name": "\u30ad\u30fc\u30a8\u30f3\u30b9"
+            },
+            {
+                "code": "2801",
+                "name": "\u30ad\u30c3\u30b3\u30fc\u30de\u30f3",
+                "original_name": "\u30ad\u30c3\u30b3\u30fc\u30de\u30f3"
+            },
+            {
+                "code": "7751",
+                "name": "\u30ad\u30e4\u30ce\u30f3",
+                "original_name": "\u30ad\u30e3\u30ce\u30f3"
+            },
+            {
+                "code": "6971",
+                "name": "\u4eac\u30bb\u30e9",
+                "original_name": "\u4eac\u30bb\u30e9"
+            },
+            {
+                "code": "2503",
+                "name": "\u30ad\u30ea\u30f3\u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9",
+                "original_name": "\u30ad\u30ea\u30f3\u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9"
+            },
+            {
+                "code": "9433",
+                "name": "\uff2b\uff24\uff24\uff29",
+                "original_name": "KDDI"
+            },
+            {
+                "code": "4922",
+                "name": "\u30b3\u30fc\u30bb\u30fc",
+                "original_name": "\u30b3\u30fc\u30bb\u30fc"
+            },
+            {
+                "code": "9766",
+                "name": "\u30b3\u30ca\u30df\u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9",
+                "original_name": "\u30b3\u30ca\u30df\u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9"
+            },
+            {
+                "code": "4967",
+                "name": "\u5c0f\u6797\u88fd\u85ac",
+                "original_name": "\u5c0f\u6797\u88fd\u85ac"
+            },
+            {
+                "code": "6301",
+                "name": "\u5c0f\u677e\u88fd\u4f5c\u6240",
+                "original_name": "\u5c0f\u677e\u88fd\u4f5c\u6240"
+            },
+            {
+                "code": "4751",
+                "name": "\u30b5\u30a4\u30d0\u30fc\u30a8\u30fc\u30b8\u30a7\u30f3\u30c8",
+                "original_name": "\u30b5\u30a4\u30d0\u30fc\u30a8\u30fc\u30b8\u30a7\u30f3\u30c8"
+            },
+            {
+                "code": "3436",
+                "name": "\uff33\uff35\uff2d\uff23\uff2f",
+                "original_name": "SUMCO"
+            },
+            {
+                "code": "5020",
+                "name": "\uff2a\uff38\uff34\uff27\u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9",
+                "original_name": "JXTG \u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9"
+            },
+            {
+                "code": "4507",
+                "name": "\u5869\u91ce\u7fa9\u88fd\u85ac",
+                "original_name": "\u5869\u91ce\u7fa9\u88fd\u85ac"
+            },
+            {
+                "code": "6869",
+                "name": "\u30b7\u30b9\u30e1\u30c3\u30af\u30b9",
+                "original_name": "\u30b7\u30b9\u30e1\u30c3\u30af\u30b9"
+            },
+            {
+                "code": "4911",
+                "name": "\u8cc7\u751f\u5802",
+                "original_name": "\u8cc7\u751f\u5802"
+            },
+            {
+                "code": "7309",
+                "name": "\u30b7\u30de\u30ce",
+                "original_name": "\u30b7\u30de\u30ce"
+            },
+            {
+                "code": "8227",
+                "name": "\u3057\u307e\u3080\u3089",
+                "original_name": "\u3057\u307e\u3080\u3089"
+            },
+            {
+                "code": "4004",
+                "name": "\u662d\u548c\u96fb\u5de5",
+                "original_name": "\u662d\u548c\u96fb\u5de5"
+            },
+            {
+                "code": "4063",
+                "name": "\u4fe1\u8d8a\u5316\u5b66\u5de5\u696d",
+                "original_name": "\u4fe1\u8d8a\u5316\u5b66\u5de5\u696d"
+            },
+            {
+                "code": "9684",
+                "name": "\u30b9\u30af\u30a6\u30a7\u30a2\u30fb\u30a8\u30cb\u30c3\u30af\u30b9\u30fb\u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9",
+                "original_name": "\u30b9\u30af\u30a6\u30a7\u30a2\u30fb\u30a8\u30cb\u30c3\u30af\u30b9"
+            },
+            {
+                "code": "7735",
+                "name": "\uff33\uff23\uff32\uff25\uff25\uff2e\u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9",
+                "original_name": "SCREEN \u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9"
+            },
+            {
+                "code": "7269",
+                "name": "\u30b9\u30ba\u30ad",
+                "original_name": "\u30b9\u30ba\u30ad"
+            },
+            {
+                "code": "7270",
+                "name": "\uff33\uff35\uff22\uff21\uff32\uff35",
+                "original_name": "SUBARU"
+            },
+            {
+                "code": "8053",
+                "name": "\u4f4f\u53cb\u5546\u4e8b",
+                "original_name": "\u4f4f\u53cb\u5546\u4e8b"
+            },
+            {
+                "code": "1928",
+                "name": "\u7a4d\u6c34\u30cf\u30a6\u30b9",
+                "original_name": "\u7a4d\u6c34\u30cf\u30a6\u30b9"
+            },
+            {
+                "code": "9735",
+                "name": "\u30bb\u30b3\u30e0",
+                "original_name": "\u30bb\u30b3\u30e0"
+            },
+            {
+                "code": "3382",
+                "name": "\u30bb\u30d6\u30f3\uff06\u30a2\u30a4\u30fb\u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9",
+                "original_name": "\u30bb\u30d6\u30f3&\u30a2\u30a4 \u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9"
+            },
+            {
+                "code": "4565",
+                "name": "\u305d\u30fc\u305b\u3044\u30b0\u30eb\u30fc\u30d7",
+                "original_name": "\u305d\u30fc\u305b\u3044\u30b0\u30eb\u30fc\u30d7"
+            },
+            {
+                "code": "6758",
+                "name": "\u30bd\u30cb\u30fc",
+                "original_name": "\u30bd\u30cb\u30fc"
+            },
+            {
+                "code": "9984",
+                "name": "\u30bd\u30d5\u30c8\u30d0\u30f3\u30af\u30b0\u30eb\u30fc\u30d7",
+                "original_name": "\u30bd\u30d5\u30c8\u30d0\u30f3\u30af"
+            },
+            {
+                "code": "9984",
+                "name": "\u30bd\u30d5\u30c8\u30d0\u30f3\u30af\u30b0\u30eb\u30fc\u30d7",
+                "original_name": "\u30bd\u30d5\u30c8\u30d0\u30f3\u30af\u30b0\u30eb\u30fc\u30d7"
+            },
+            {
+                "code": "4568",
+                "name": "\u7b2c\u4e00\u4e09\u5171",
+                "original_name": "\u7b2c\u4e00\u4e09\u5171"
+            },
+            {
+                "code": "8750",
+                "name": "\u7b2c\u4e00\u751f\u547d\u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9",
+                "original_name": "\u7b2c\u4e00\u751f\u547d \u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9"
+            },
+            {
+                "code": "6367",
+                "name": "\u30c0\u30a4\u30ad\u30f3\u5de5\u696d",
+                "original_name": "\u30c0\u30a4\u30ad\u30f3\u5de5\u696d"
+            },
+            {
+                "code": "6383",
+                "name": "\u30c0\u30a4\u30d5\u30af",
+                "original_name": "\u30c0\u30a4\u30d5\u30af"
+            },
+            {
+                "code": "6976",
+                "name": "\u592a\u967d\u8a98\u96fb",
+                "original_name": "\u592a\u967d\u8a98\u96fb"
+            },
+            {
+                "code": "4502",
+                "name": "\u6b66\u7530\u85ac\u54c1\u5de5\u696d",
+                "original_name": "\u6b66\u7530\u85ac\u54c1\u5de5\u696d"
+            },
+            {
+                "code": "4519",
+                "name": "\u4e2d\u5916\u88fd\u85ac",
+                "original_name": "\u4e2d\u5916\u88fd\u85ac"
+            },
+            {
+                "code": "2432",
+                "name": "ディー・エヌ・エー",
+                "original_name": "ディーエヌエー"
+              },
+            {
+                "code": "6762",
+                "name": "\uff34\uff24\uff2b",
+                "original_name": "TDK"
+            },
+            {
+                "code": "6146",
+                "name": "\u30c7\u30a3\u30b9\u30b3",
+                "original_name": "\u30c7\u30a3\u30b9\u30b3"
+            },
+            {
+                "code": "4543",
+                "name": "\u30c6\u30eb\u30e2",
+                "original_name": "\u30c6\u30eb\u30e2"
+            },
+            {
+                "code": "6902",
+                "name": "\u30c7\u30f3\u30bd\u30fc",
+                "original_name": "\u30c7\u30f3\u30bd\u30fc"
+            },
+            {
+                "code": "9022",
+                "name": "\u6771\u6d77\u65c5\u5ba2\u9244\u9053",
+                "original_name": "\u6771\u6d77\u65c5\u5ba2\u9244\u9053"
+            },
+            {
+                "code": "8035",
+                "name": "\u6771\u4eac\u30a8\u30ec\u30af\u30c8\u30ed\u30f3",
+                "original_name": "\u6771\u4eac\u30a8\u30ec\u30af\u30c8\u30ed\u30f3"
+            },
+            {
+                "code": "8766",
+                "name": "\u6771\u4eac\u6d77\u4e0a\u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9",
+                "original_name": "\u6771\u4eac\u6d77\u4e0a \u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9"
+            },
+            {
+                "code": "7751",
+                "name": "\u30ad\u30e4\u30ce\u30f3",
+                "original_name": "\u6771\u829d"
+            },
+            {
+                "code": "9602",
+                "name": "\u6771\u5b9d",
+                "original_name": "\u6771\u5b9d"
+            },
+            {
+                "code": "3402",
+                "name": "\u6771\u30ec",
+                "original_name": "\u6771\u30ec"
+            },
+            {
+                "code": "4042",
+                "name": "\u6771\u30bd\u30fc",
+                "original_name": "\u6771\u30bd\u30fc"
+            },
+            {
+                "code": "5332",
+                "name": "\uff34\uff2f\uff34\uff2f",
+                "original_name": "TOTO"
+            },
+            {
+                "code": "7203",
+                "name": "\u30c8\u30e8\u30bf\u81ea\u52d5\u8eca",
+                "original_name": "\u30c8\u30e8\u30bf\u81ea\u52d5\u8eca"
+            },
+            {
+                "code": "2871",
+                "name": "\u30cb\u30c1\u30ec\u30a4",
+                "original_name": "\u30cb\u30c1\u30ec\u30a4"
+            },
+            {
+                "code": "4021",
+                "name": "\u65e5\u7523\u5316\u5b66",
+                "original_name": "\u65e5\u7523\u5316\u5b66"
+            },
+            {
+                "code": "7201",
+                "name": "\u65e5\u7523\u81ea\u52d5\u8eca",
+                "original_name": "\u65e5\u7523\u81ea\u52d5\u8eca"
+            },
+            {
+                "code": "2897",
+                "name": "\u65e5\u6e05\u98df\u54c1\u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9",
+                "original_name": "\u65e5\u6e05\u98df\u54c1 \u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9"
+            },
+            {
+                "code": "9843",
+                "name": "\u30cb\u30c8\u30ea\u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9",
+                "original_name": "\u30cb\u30c8\u30ea\u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9"
+            },
+            {
+                "code": "4716",
+                "name": "\u65e5\u672c\u30aa\u30e9\u30af\u30eb",
+                "original_name": "\u65e5\u672c\u30aa\u30e9\u30af\u30eb"
+            },
+            {
+                "code": "2914",
+                "name": "\u65e5\u672c\u305f\u3070\u3053\u7523\u696d",
+                "original_name": "\u65e5\u672c\u305f\u3070\u3053\u7523\u696d"
+            },
+            {
+                "code": "6701",
+                "name": "\u65e5\u672c\u96fb\u6c17",
+                "original_name": "\u65e5\u672c\u96fb\u6c17"
+            },
+            {
+                "code": "6594",
+                "name": "\u65e5\u672c\u96fb\u7523",
+                "original_name": "\u65e5\u672c\u96fb\u7523"
+            },
+            {
+                "code": "9432",
+                "name": "\u65e5\u672c\u96fb\u4fe1\u96fb\u8a71",
+                "original_name": "\u65e5\u672c\u96fb\u4fe1\u96fb\u8a71"
+            },
+            {
+                "code": "7974",
+                "name": "\u4efb\u5929\u5802",
+                "original_name": "\u4efb\u5929\u5802"
+            },
+            {
+                "code": "3659",
+                "name": "\u30cd\u30af\u30bd\u30f3",
+                "original_name": "\u30cd\u30af\u30bd\u30f3"
+            },
+            {
+                "code": "6752",
+                "name": "\u30d1\u30ca\u30bd\u30cb\u30c3\u30af",
+                "original_name": "\u30d1\u30ca\u30bd\u30cb\u30c3\u30af"
+            },
+            {
+                "code": "7832",
+                "name": "\u30d0\u30f3\u30c0\u30a4\u30ca\u30e0\u30b3\u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9",
+                "original_name": "\u30d0\u30f3\u30c0\u30a4\u30ca\u30e0\u30b3 \u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9"
+            },
+            {
+                "code": "9020",
+                "name": "\u6771\u65e5\u672c\u65c5\u5ba2\u9244\u9053",
+                "original_name": "\u6771\u65e5\u672c\u65c5\u5ba2\u9244\u9053"
+            },
+            {
+                "code": "6501",
+                "name": "\u65e5\u7acb\u88fd\u4f5c\u6240",
+                "original_name": "\u65e5\u7acb\u88fd\u4f5c\u6240"
+            },
+            {
+                "code": "9983",
+                "name": "\u30d5\u30a1\u30fc\u30b9\u30c8\u30ea\u30c6\u30a4\u30ea\u30f3\u30b0",
+                "original_name": "\u30d5\u30a1\u30fc\u30b9\u30c8\u30ea\u30c6\u30a4\u30ea\u30f3\u30b0"
+            },
+            {
+                "code": "6954",
+                "name": "\u30d5\u30a1\u30ca\u30c3\u30af",
+                "original_name": "\u30d5\u30a1\u30ca\u30c3\u30af"
+            },
+            {
+                "code": "6702",
+                "name": "\u5bcc\u58eb\u901a",
+                "original_name": "\u5bcc\u58eb\u901a"
+            },
+            {
+                "code": "4901",
+                "name": "\u5bcc\u58eb\u30d5\u30a4\u30eb\u30e0\u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9",
+                "original_name": "\u5bcc\u58eb\u30d5\u30a3\u30eb\u30e0 \u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9"
+            },
+            {
+                "code": "5108",
+                "name": "\u30d6\u30ea\u30c2\u30b9\u30c8\u30f3",
+                "original_name": "\u30d6\u30ea\u30c2\u30b9\u30c8\u30f3"
+            },
+            {
+                "code": "7741",
+                "name": "\uff28\uff2f\uff39\uff21",
+                "original_name": "HOYA"
+            },
+            {
+                "code": "7267",
+                "name": "\u672c\u7530\u6280\u7814\u5de5\u696d",
+                "original_name": "\u672c\u7530\u6280\u7814\u5de5\u696d"
+            },
+            {
+                "code": "7261",
+                "name": "\u30de\u30c4\u30c0",
+                "original_name": "\u30de\u30c4\u30c0"
+            },
+            {
+                "code": "8411",
+                "name": "\u307f\u305a\u307b\u30d5\u30a3\u30ca\u30f3\u30b7\u30e3\u30eb\u30b0\u30eb\u30fc\u30d7",
+                "original_name": "\u307f\u305a\u307bFG"
+            },
+            {
+                "code": "8316",
+                "name": "\u4e09\u4e95\u4f4f\u53cb\u30d5\u30a3\u30ca\u30f3\u30b7\u30e3\u30eb\u30b0\u30eb\u30fc\u30d7",
+                "original_name": "\u4e09\u4e95\u4f4f\u53cbFG"
+            },
+            {
+                "code": "8031",
+                "name": "\u4e09\u4e95\u7269\u7523",
+                "original_name": "\u4e09\u4e95\u7269\u7523"
+            },
+            {
+                "code": "8801",
+                "name": "\u4e09\u4e95\u4e0d\u52d5\u7523",
+                "original_name": "\u4e09\u4e95\u4e0d\u52d5\u7523"
+            },
+            {
+                "code": "4188",
+                "name": "\u4e09\u83f1\u30b1\u30df\u30ab\u30eb\u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9",
+                "original_name": "\u4e09\u83f1\u30b1\u30df\u30ab\u30eb \u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9"
+            },
+            {
+                "code": "7011",
+                "name": "\u4e09\u83f1\u91cd\u5de5\u696d",
+                "original_name": "\u4e09\u83f1\u91cd\u5de5\u696d"
+            },
+            {
+                "code": "8058",
+                "name": "\u4e09\u83f1\u5546\u4e8b",
+                "original_name": "\u4e09\u83f1\u5546\u4e8b"
+            },
+            {
+                "code": "8802",
+                "name": "\u4e09\u83f1\u5730\u6240",
+                "original_name": "\u4e09\u83f1\u5730\u6240"
+            },
+            {
+                "code": "6503",
+                "name": "\u4e09\u83f1\u96fb\u6a5f",
+                "original_name": "\u4e09\u83f1\u96fb\u6a5f"
+            },
+            {
+                "code": "8306",
+                "name": "三菱ＵＦＪフィナンシャル・グループ",
+                "original_name": "三菱UFJ"
+              },
+            {
+                "code": "6981",
+                "name": "\u6751\u7530\u88fd\u4f5c\u6240",
+                "original_name": "\u6751\u7530\u88fd\u4f5c\u6240"
+            },
+            {
+                "code": "2269",
+                "name": "\u660e\u6cbb\u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9",
+                "original_name": "\u660e\u6cbb\u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9"
+            },
+            {
+                "code": "4385",
+                "name": "\u30e1\u30eb\u30ab\u30ea",
+                "original_name": "\u30e1\u30eb\u30ab\u30ea"
+            },
+            {
+                "code": "6506",
+                "name": "\u5b89\u5ddd\u96fb\u6a5f",
+                "original_name": "\u5b89\u5ddd\u96fb\u6a5f"
+            },
+            {
+                "code": "4689",
+                "name": "\u30e4\u30d5\u30fc",
+                "original_name": "\u30e4\u30d5\u30fc"
+            },
+            {
+                "code": "9831",
+                "name": "\u30e4\u30de\u30c0\u96fb\u6a5f",
+                "original_name": "\u30e4\u30de\u30c0\u96fb\u6a5f"
+            },
+            {
+                "code": "9064",
+                "name": "\u30e4\u30de\u30c8\u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9",
+                "original_name": "\u30e4\u30de\u30c8\u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9"
+            },
+            {
+                "code": "7272",
+                "name": "ヤマハ発動機",
+                "original_name": "ヤマハ発動機"
+              },
+            {
+                "code": "8113",
+                "name": "\u30e6\u30cb\u30fb\u30c1\u30e3\u30fc\u30e0",
+                "original_name": "\u30e6\u30cb\u30fb\u30c1\u30e3\u30fc\u30e0"
+            },
+            {
+                "code": "4755",
+                "name": "\u697d\u5929",
+                "original_name": "\u697d\u5929"
+            },
+            {
+                "code": "6098",
+                "name": "\u30ea\u30af\u30eb\u30fc\u30c8\u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9",
+                "original_name": "\u30ea\u30af\u30eb\u30fc\u30c8 \u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9"
+            },
+            {
+                "code": "7453",
+                "name": "\u826f\u54c1\u8a08\u753b",
+                "original_name": "\u826f\u54c1\u8a08\u753b"
+            },
+            {
+                "code": "6723",
+                "name": "\u30eb\u30cd\u30b5\u30b9\u30a8\u30ec\u30af\u30c8\u30ed\u30cb\u30af\u30b9",
+                "original_name": "\u30eb\u30cd\u30b5\u30b9"
+            },
+            {
+                "code": "6963",
+                "name": "\u30ed\u30fc\u30e0",
+                "original_name": "\u30ed\u30fc\u30e0"
+            },
+            {
+                "code": "7564",
+                "name": "\u30ef\u30fc\u30af\u30de\u30f3",
+                "original_name": "\u30ef\u30fc\u30af\u30de\u30f3"
+            }
+        ]
+    }
+}

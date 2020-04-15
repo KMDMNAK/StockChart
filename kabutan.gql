@@ -1,0 +1,43 @@
+type Query {
+  assistance(inputText:String):[CompanyCodeAndName]
+  stockdata(objects:StockDataCondition):[StockData]
+  getTopAssistances_async(inputTexts:[String]):[CompanyCodeForTop]!
+  getTopAssistances_sync(inputTexts:[String]):[CompanyCodeForTop]!
+}
+type CompanyCodeForTop{
+  code:String
+  name:String
+  original_name:String!
+}
+type CompanyCodeAndName{
+  code:String!
+  name:String!
+}
+
+input CompanyCode{
+  code:String!
+}
+
+input StockDataCondition{
+  code:String!
+  datatype:DataType
+  page:Int
+}
+
+enum DataType{
+  day
+  wek
+  shin
+  mon
+  yar
+}
+type StockData{
+  date:String
+  OR:Float
+  HP:Float
+  LP:Float
+  CR:Float
+  DoD:Float
+  DoDP:Float
+  Rev:Float
+}
