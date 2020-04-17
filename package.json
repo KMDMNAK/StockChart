@@ -1,0 +1,11 @@
+{
+  "name": "StockChart",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:KMDMNAK/StockChart.git",
+  "author": "KMDMNAK <kmdmuneaki@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/execall": "^2.0.1"
+  }
+}
