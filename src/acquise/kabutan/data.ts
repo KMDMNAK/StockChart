@@ -3,7 +3,7 @@ import fetch from 'node-fetch';
 import execAll from 'execall'
 
 const columnCorrespond: { [key: string]: string } = {
-    日付: "date",
+    日付: "Date",
     始値: "OR",
     高値: "HP",
     安値: "LP",
@@ -22,6 +22,10 @@ type PullDown = {
     code: string,
     name: string
 }
+
+/**
+ * kabutanから、企業名とコードの予測を取得する
+ */
 export const getPullDown = async (inputString: string): Promise<PullDown[]> => {
     const resp = await fetch(PULL_DOWN_URL, {
         method: 'POST',
@@ -35,6 +39,10 @@ export const getPullDown = async (inputString: string): Promise<PullDown[]> => {
         return { code, name }
     })
 }
+
+/**
+ * kabutanにおけるコードと、表示種類を指定し、該当する会社の株価を取得する。
+ */
 type DateType = 'day' | 'wek' | 'shin' | 'mon' | 'yar'
 export const getStockData = async (code: string, type: DateType, page: Number) => {
     const actualPage = page !== -1 ? page : 0
