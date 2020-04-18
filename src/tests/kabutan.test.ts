@@ -1,4 +1,4 @@
-import { getStockData, getPullDown } from '../acquise/kabutan'
+import { getStockData, getPullDown } from '../acquise/kabutan/data'
 
 describe('', () => {
     it('pull down', async () => {
