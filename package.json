@@ -6,7 +6,8 @@
     "author": "KMDMNAK <kmdmuneaki@gmail.com>",
     "license": "MIT",
     "scripts": {
-        "env": "config/env.bat"
+        "env": "config/env.bat",
+        "script": "ts-node --project ./tsconfig.json src/scripts/kabutan2firestore.ts"
     },
     "devDependencies": {
         "@types/execall": "^2.0.1",
