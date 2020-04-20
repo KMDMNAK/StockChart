@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from '../component/header'
+import Content from '../component/content'
 import { page } from '../utils'
 
 page(<>
@@ -7,4 +8,5 @@ page(<>
     <div>
         Hello World!
     </div>
+    <Content />
 </>)
