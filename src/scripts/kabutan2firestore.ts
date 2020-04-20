@@ -22,7 +22,7 @@ const column2firestore = () => {
         console.error("Errored", e)
     })
 }
-import { Kabutan } from '../@types/kabutan'
+import { Kabutan } from '../../@types/kabutan'
 import { promises } from 'fs'
 
 const data2firestore = async () => {
