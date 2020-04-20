@@ -3,3 +3,5 @@ data
 environment
 garbage
 public
+*/**/@types
+*/**/constants.ts
