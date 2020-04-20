@@ -30,5 +30,8 @@ module.exports = {
             }
         }
     },
+    externals: {
+        firebase: 'firebase'
+    },
     plugins: [new ForkTsCheckerWebpackPlugin(), new webpack.NamedModulesPlugin()].concat(htmlPlugins)
 }
