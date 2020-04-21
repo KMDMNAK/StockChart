@@ -1,10 +1,7 @@
 import { hot } from 'react-hot-loader/root'
 import React, { useState, useEffect } from 'react'
 //import firebase from 'firebase'
-import * as firebase from 'firebase';
-//import 'firebase/firestore';
-
-const fstore = firebase.firestore()
+import { fstore } from '../firebase'
 
 const Content = () => {
     const [data, setData] = useState({} as FirestoreQuery.CompanyData)

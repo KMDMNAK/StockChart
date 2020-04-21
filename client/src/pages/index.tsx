@@ -1,12 +1,9 @@
 import React from 'react'
 import Header from '../component/header'
 import Content from '../component/content'
+import DailyCompany from '../component/DailyCompany'
 import { page } from '../utils'
 
 page(<>
-    <Header></Header>
-    <div>
-        Hello World!
-    </div>
-    <Content />
+    <DailyCompany wantDate={'2019-09-20'} />
 </>)
