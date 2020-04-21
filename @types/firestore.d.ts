@@ -9,4 +9,5 @@ declare namespace FirestoreQuery {
         OR: number
         Rev: number
     }
+    type UpOrDownFiveCompanies = (CompanyData & { name: string })[]
 }

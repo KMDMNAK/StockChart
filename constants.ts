@@ -1,2 +1,5 @@
 export const COMPANY_REF = 'Company'
-export const COMPANY_DATA_DOCREF = 'Data'
+export const COMPANY_DATA_REF = 'Data'
+export const DAILY_REF = 'Daily'
+export const DAILY_UPCOMPANY_DOCREF = 'UpCompanies'
+export const DAILY_DOWNCOMPANY_DOCREF = 'DownCompanies'
