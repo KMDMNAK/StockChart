@@ -4,7 +4,7 @@
 import { initializeApp } from '../firebase'
 import { firestore } from 'firebase-admin'
 import kabutanCode from '../kabutanCode.json'
-import { COMPANY_REF, COMPANY_DATA_DOCREF } from '../constants'
+import { COMPANY_REF, COMPANY_DATA_REF } from '../constants'
 
 initializeApp()
 const fstore = firestore()
@@ -33,7 +33,7 @@ const data2firestore = async () => {
         const newPath = jsonDataPath + '/' + file
         const datas = JSON.parse((await promises.readFile(newPath)).toString()) as Kabutan.Data[]
         const companyName = file.split('.')[0]
-        const snapshot = await fstore.collection(COMPANY_REF).doc(companyName).collection(COMPANY_DATA_DOCREF).get()
+        const snapshot = await fstore.collection(COMPANY_REF).doc(companyName).collection(COMPANY_DATA_REF).get()
         if (snapshot.docs.length !== 0) return
         datas.forEach((data) => {
             const [year, month, day] = data.date.split('/')
@@ -41,7 +41,7 @@ const data2firestore = async () => {
             // convert data to firestore
             const firestoreDate = firestore.Timestamp.fromDate(new Date(parseInt("20" + year), parseInt(month) - 1, parseInt(day)))
             batch.set(
-                fstore.collection(COMPANY_REF).doc(companyName).collection(COMPANY_DATA_DOCREF).doc(`20${year}-${month}-${day}`),
+                fstore.collection(COMPANY_REF).doc(companyName).collection(COMPANY_DATA_REF).doc(`20${year}-${month}-${day}`),
                 { ...data, Date: firestoreDate }
             )
         })
