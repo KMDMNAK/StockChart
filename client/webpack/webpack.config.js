@@ -9,8 +9,9 @@ module.exports = {
     entry: { 'index': path.join(__dirname, '..', 'src', 'pages', 'index.tsx') },
     output: {
         path: path.resolve(__dirname, '..', 'public'),
-        filename: '[name].js',
-        sourceMapFilename: '[name].map'
+        filename: 'index.js',
+        sourceMapFilename: '[name].map',
+        publicPath: '/'
     },
     module: { rules },
     resolve: {
@@ -28,7 +29,8 @@ module.exports = {
                 target: process.env.WEBPACK_DEV_PROXY || 'http://localhost:3000',
                 changeOrigin: true
             }
-        }
+        },
+        historyApiFallback: true
     },
     externals: {
         firebase: 'firebase'
