@@ -1,6 +1,7 @@
+
 declare namespace FirestoreQuery {
     type CompanyData = {
-        Date: Date,
+        Date: any,
         CR: number
         DoD: null | number
         DoDP: null | number
