@@ -10,8 +10,11 @@ import { hot } from 'react-hot-loader/root'
 import { upCompaniesRef, downCompaniesRef } from '../firebase'
 import { firestore } from 'firebase'
 
-
-const FiveCompanies = (props: { type: 'UP' | 'DOWN', companies: FirestoreQuery.UpOrDownFiveCompanies }) => {
+const FiveCompanies = (props: {
+    type: 'UP' | 'DOWN',
+    companies: FirestoreQuery.UpOrDownFiveCompanies,
+    clickCompanyName: DailyCompany.ClickCompanyName
+}) => {
     if (props.companies.length !== 5) console.warn('Company datas length is not five.')
     return (
         <>
@@ -21,7 +24,7 @@ const FiveCompanies = (props: { type: 'UP' | 'DOWN', companies: FirestoreQuery.U
             <div style={{ display: 'flex', justifyContent: 'space-around' }}>
                 {props.companies.map(data => (
                     <span style={{ margin: '10px' }}>
-                        <div style={{textAlign:'center',padding:'30px'}}>{data.name}</div>
+                        <div style={{ textAlign: 'center', padding: '30px' }} onClick={() => { props.clickCompanyName(data.name) }}>{data.name}</div>
                         <div>
                             <span style={{ padding: '10px' }}>
                                 {data.DoD}
@@ -48,7 +51,9 @@ const FetchHandler = (reference: firestore.DocumentReference, wantDate: string) 
 const promiseUp = (wantDate: string) => FetchHandler(upCompaniesRef, wantDate)
 const promiseDown = (wantDate: string) => FetchHandler(downCompaniesRef, wantDate)
 
-const DailyCompany = (props: { wantDate: string }) => {
+const DailyCompany = (props: { wantDate: string, clickCompanyName: DailyCompany.ClickCompanyName }) => {
+    const clickCompanyName = props.clickCompanyName ? props.clickCompanyName : (companyName: string) => console.log(companyName)
+
     const [upCompanies, setUpCompanies] = useState([] as FirestoreQuery.UpOrDownFiveCompanies)
     const [downCompanies, setDownCompanies] = useState([] as FirestoreQuery.UpOrDownFiveCompanies)
     useEffect(() => {
@@ -67,10 +72,10 @@ const DailyCompany = (props: { wantDate: string }) => {
     return (
         <>
             <div style={{ marginTop: '100px' }}>
-                <FiveCompanies type='UP' companies={upCompanies} />
+                <FiveCompanies type='UP' companies={upCompanies} clickCompanyName={clickCompanyName} />
             </div>
             <div style={{ marginTop: '50px' }}>
-                <FiveCompanies type='DOWN' companies={downCompanies} />
+                <FiveCompanies type='DOWN' companies={downCompanies} clickCompanyName={clickCompanyName} />
             </div>
         </>
     )
