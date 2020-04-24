@@ -8,7 +8,7 @@ import { COMPANY_REF, COMPANY_DATA_REF } from '../constants'
 
 initializeApp()
 const fstore = firestore()
-
+// localにあるjsonファイルのデータをfirestoreにupdate
 const column2firestore = () => {
     const batch = fstore.batch()
     kabutanCode.data.getTopAssistances.map(item => {
