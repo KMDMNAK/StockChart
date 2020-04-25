@@ -5,6 +5,7 @@ const ts_rule = require('./ts_rule')
 const rules = [ts_rule]
 const htmlPlugins = require('./html')
 
+const isDevelopment = true
 module.exports = {
     entry: { 'index': path.join(__dirname, '..', 'src', 'pages', 'index.tsx') },
     output: {
@@ -35,5 +36,6 @@ module.exports = {
     externals: {
         firebase: 'firebase'
     },
+    devtool: isDevelopment ? '#eval-source-map' : 'source-map',
     plugins: [new ForkTsCheckerWebpackPlugin(), new webpack.NamedModulesPlugin()].concat(htmlPlugins)
 }
