@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react'
 import { hot } from 'react-hot-loader/root'
 import { COMPANY_DATA_REF, COMPANY_REF } from '../constants'
-import { fstore } from '../firebase'
+import { fstore } from '../utils/firebase'
 import { firestore } from 'firebase'
 import ReactEcharts from 'echarts-for-react';
 
@@ -52,20 +52,21 @@ const createOption = (data: { name: string, value: any[] }[]) => {
 
 
 const CompanyDataContext = React.createContext({ loading: true, data: [] } as { loading: boolean, data: FirestoreQuery.CompanyData[] })
-type CompanyState = { loading: boolean, companyName: string, data: FirestoreQuery.CompanyData[] }
+type CompanyDataHandlerState = { loading: boolean, companyNameToCheck: string, data: FirestoreQuery.CompanyData[] }
 const CompanyDataHandler = (props: { companyName: string, children: JSX.Element }) => {
-    const [data, setData] = useState({ loading: true, companyName: '', data: [] } as CompanyState)
-    if (data.loading) {
-        console.log(`Get CompanyData`)
+    const [companyDataState, setCompanyDataState] = useState({ loading: true, companyNameToCheck: '', data: [] } as CompanyDataHandlerState)
+    console.debug('CompanyDataHandler', { companyDataState, companyName: props.companyName })
+    if (companyDataState.loading) {
         companyDataRef(props.companyName).get().then(snapshot => {
             const data = snapshot.docs.slice(-50).map(doc => doc.data() as FirestoreQuery.CompanyData)
-            setData({ loading: false, data, companyName: props.companyName })
+            if (data.length === 0) console.warn(`No data is for ${props.companyName}`)
+            setCompanyDataState({ loading: false, data, companyNameToCheck: props.companyName })
         })
-    } else if (data.companyName !== props.companyName) {
-        setData({ ...data, loading: true, companyName: props.companyName })
+    } else if (companyDataState.companyNameToCheck !== props.companyName) {
+        setCompanyDataState({ ...companyDataState, companyNameToCheck: props.companyName })
     }
     return (
-        <CompanyDataContext.Provider value={data}>
+        <CompanyDataContext.Provider value={companyDataState}>
             {props.children}
         </CompanyDataContext.Provider>)
 }
@@ -73,9 +74,10 @@ const CompanyDataHandler = (props: { companyName: string, children: JSX.Element 
 const AttrContext = React.createContext('DoD')
 const AttrButton = (props: { children: JSX.Element }) => {
     const [attr, setAttr] = useState('DoD')
-    const attrChoice = ['CR', 'HP', 'LP','DoD']
+    const attrChoice = ['CR', 'DoD', 'DoDP', 'HP', 'LP', 'OR', 'Rev']
+    console.debug('AttrButton', { attr })
     return (<>
-        {attrChoice.map(eachAttr => (< button key={eachAttr} onClick={() => { console.log(eachAttr, 'clicked'); setAttr(eachAttr) }}>{eachAttr}</button>))}
+        {attrChoice.map(eachAttr => (< button key={eachAttr} onClick={() => { setAttr(eachAttr) }}>{eachAttr}</button>))}
         <AttrContext.Provider value={attr}>
             {props.children}
         </AttrContext.Provider>
@@ -87,15 +89,14 @@ const createChartData = (data: FirestoreQuery.CompanyData[], attr: string) => da
         value: [eachData.Date.toDate().toLocaleString(), eachData[attr]]
     }
 })
-const Chart = () => {
+export const Chart = () => {
     // const [companyData, setCompanyData] = useState([] as { name: string, value: any[] }[])
     const attr = useContext(AttrContext)
     const [chartState, setChartState] = useState({ chartData: [], attr } as { attr: string, chartData: { name: string, value: any[] }[] })
     const { loading, data } = useContext(CompanyDataContext)
+    console.debug('Chart', { attr, chartState, data })
     useEffect(() => {
-        console.log('chart effect')
-        console.log(`Attr:${attr}`)
-        if (!loading && (chartState.attr !== attr || chartState.chartData === [])) {
+        if (!loading && (chartState.attr !== attr || chartState.chartData.length === 0)) {
             setChartState({ chartData: createChartData(data, attr), attr })
         }
     })
@@ -108,7 +109,7 @@ const Chart = () => {
 
 
 const CompanyChart = (props: { companyName: string }) => (
-    <CompanyDataHandler companyName={props.companyName}>
+    <CompanyDataHandler companyName={decodeURIComponent(props.companyName)}>
         <AttrButton>
             <Chart />
         </AttrButton>
@@ -145,8 +146,7 @@ const CompanyData = (props: { companyName: string }) => {
                             ))}
                         </tr>
                     )
-                })
-                }
+                })}
             </>)}
         </table>
     )
