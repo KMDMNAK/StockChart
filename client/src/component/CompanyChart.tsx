@@ -51,19 +51,20 @@ const createOption = (data: { name: string, value: any[] }[]) => {
 }
 
 
-const CompanyDataContext = React.createContext({ loading: true, data: [] } as { loading: boolean, data: FirestoreQuery.CompanyData[] })
-type CompanyDataHandlerState = { loading: boolean, companyNameToCheck: string, data: FirestoreQuery.CompanyData[] }
+const CompanyDataContext = React.createContext({ loading: true, data: [], companyName: '' } as { companyName: string, loading: boolean, data: FirestoreQuery.CompanyData[] })
+type CompanyDataHandlerState = { loading: boolean, companyName: string, data: FirestoreQuery.CompanyData[] }
 const CompanyDataHandler = (props: { companyName: string, children: JSX.Element }) => {
-    const [companyDataState, setCompanyDataState] = useState({ loading: true, companyNameToCheck: '', data: [] } as CompanyDataHandlerState)
+    const [companyDataState, setCompanyDataState] = useState({ loading: true, companyName: '', data: [] } as CompanyDataHandlerState)
     console.debug('CompanyDataHandler', { companyDataState, companyName: props.companyName })
     if (companyDataState.loading) {
         companyDataRef(props.companyName).get().then(snapshot => {
+            console.debug('CompanyDataHandler', 'Get Datas from firestore.')
             const data = snapshot.docs.slice(-50).map(doc => doc.data() as FirestoreQuery.CompanyData)
             if (data.length === 0) console.warn(`No data is for ${props.companyName}`)
-            setCompanyDataState({ loading: false, data, companyNameToCheck: props.companyName })
+            setCompanyDataState({ loading: false, data, companyName: props.companyName })
         })
-    } else if (companyDataState.companyNameToCheck !== props.companyName) {
-        setCompanyDataState({ ...companyDataState, companyNameToCheck: props.companyName })
+    } else if (companyDataState.companyName !== props.companyName) {
+        setCompanyDataState({ ...companyDataState, loading: true })
     }
     return (
         <CompanyDataContext.Provider value={companyDataState}>
@@ -75,7 +76,7 @@ const AttrContext = React.createContext('DoD')
 const AttrButton = (props: { children: JSX.Element }) => {
     const [attr, setAttr] = useState('DoD')
     const attrChoice = ['CR', 'DoD', 'DoDP', 'HP', 'LP', 'OR', 'Rev']
-    console.debug('AttrButton', { attr })
+    console.debug('AttrButtonZ', { attr })
     return (<>
         {attrChoice.map(eachAttr => (< button key={eachAttr} onClick={() => { setAttr(eachAttr) }}>{eachAttr}</button>))}
         <AttrContext.Provider value={attr}>
@@ -92,14 +93,14 @@ const createChartData = (data: FirestoreQuery.CompanyData[], attr: string) => da
 export const Chart = () => {
     // const [companyData, setCompanyData] = useState([] as { name: string, value: any[] }[])
     const attr = useContext(AttrContext)
-    const [chartState, setChartState] = useState({ chartData: [], attr } as { attr: string, chartData: { name: string, value: any[] }[] })
-    const { loading, data } = useContext(CompanyDataContext)
+    const { loading, data, companyName } = useContext(CompanyDataContext)
+    const [chartState, setChartState] = useState({ chartData: [], attr, companyName: companyName } as { attr: string, companyName: string, chartData: { name: string, value: any[] }[] })
     console.debug('Chart', { attr, chartState, data })
     useEffect(() => {
-        if (!loading && (chartState.attr !== attr || chartState.chartData.length === 0)) {
-            setChartState({ chartData: createChartData(data, attr), attr })
+        if (!loading && (chartState.attr !== attr || chartState.chartData.length === 0 || chartState.companyName !== companyName)) {
+            setChartState({ chartData: createChartData(data, attr), attr, companyName: chartState.companyName })
         }
-    })
+    }, [companyName, attr])
     return (
         <>
             {chartState.chartData.length !== 0 && (<ReactEcharts option={createOption(chartState.chartData)} />)}
