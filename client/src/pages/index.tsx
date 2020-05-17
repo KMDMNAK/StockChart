@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, Suspense } from 'react'
 
 import DailyCompany from '../component/DailyCompany'
 import { page } from '../utils'
 
 
-import Detail from './detail'
+
+const Detail = React.lazy(() => import('./detail'));
 
 
 /**
@@ -32,7 +33,10 @@ const Router = () => {
     if (!url.startsWith('/')) throw Error('Something is wrong with url.')
     const pathes = url.split('/')
     if (pathes[1] === '') return <Index setUrl={setUrl} />
-    if (pathes[1] === 'detail' && pathes.length === 3) return <Detail setUrl={setUrl} companyName={pathes[2]} />
+    if (pathes[1] === 'detail' && pathes.length === 3) return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <Detail setUrl={setUrl} companyName={pathes[2]} />
+        </Suspense>)
     return <></>
 }
 page(<Router />)
