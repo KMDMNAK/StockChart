@@ -23,7 +23,7 @@ const FiveCompanies = (props: {
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-around' }}>
                 {props.companies.map(data => (
-                    <span style={{ margin: '10px' }}>
+                    <span style={{ margin: '10px' }} key={data.name}>
                         <div style={{ textAlign: 'center', padding: '30px' }} onClick={() => { props.clickCompanyName(data.name) }}>{data.name}</div>
                         <div>
                             <span style={{ padding: '10px' }}>

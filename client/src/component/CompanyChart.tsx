@@ -12,10 +12,10 @@ const companyDataRef = (companyName: string) => fstore
 
 let original_data: FirestoreQuery.CompanyData[] | null = null
 
-const createOption = (data: { name: string, value: any[] }[]) => {
+const createOption = (companyName: string, data: { name: string, value: any[] }[]) => {
     return {
         title: {
-            text: 'Stock Chart'
+            text: companyName
         },
         tooltip: {
             trigger: 'axis',
@@ -98,12 +98,12 @@ export const Chart = () => {
     console.debug('Chart', { attr, chartState, data })
     useEffect(() => {
         if (!loading && (chartState.attr !== attr || chartState.chartData.length === 0 || chartState.companyName !== companyName)) {
-            setChartState({ chartData: createChartData(data, attr), attr, companyName: chartState.companyName })
+            setChartState({ chartData: createChartData(data, attr), attr, companyName: companyName })
         }
     }, [companyName, attr])
     return (
         <>
-            {chartState.chartData.length !== 0 && (<ReactEcharts option={createOption(chartState.chartData)} />)}
+            {chartState.chartData.length !== 0 && (<ReactEcharts option={createOption(chartState.companyName, chartState.chartData)} />)}
         </>
     )
 }
