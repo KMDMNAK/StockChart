@@ -7,7 +7,7 @@
 
 import React, { useEffect, useState, Suspense } from 'react'
 import { hot } from 'react-hot-loader/root'
-import { upCompaniesRef, downCompaniesRef } from '../utils/firebase'
+import { upCompaniesRef, downCompaniesRef } from '../firebase'
 import { firestore } from 'firebase'
 
 const FiveCompanies = (props: {

@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react'
 import { hot } from 'react-hot-loader/root'
 import { firestore } from 'firebase'
 
-import { fstore } from '../utils/firebase'
+import { fstore } from '../firebase'
 import { COMPANY_REF } from '../constants'
 
 type PredictHandlerState = { inputWord: string, predictValues: string[] }

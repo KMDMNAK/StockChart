@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react'
 import { hot } from 'react-hot-loader/root'
 import { COMPANY_DATA_REF, COMPANY_REF } from '../constants'
-import { fstore } from '../utils/firebase'
+import { fstore } from '../firebase'
 import { firestore } from 'firebase'
 import ReactEcharts from 'echarts-for-react';
 
