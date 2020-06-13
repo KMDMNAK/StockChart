@@ -1,14 +1,16 @@
 import React from 'react'
 import CompanyChart from '../component/CompanyChart'
 import SearchCompany from '../component/SearchCompany'
+import CompanyNews from '../component/CompanyNews'
 
-export default (props: { setUrl: React.Dispatch<React.SetStateAction<string>>, companyName: string }) => {
-    const [title, url] = [`${props.companyName}`, `/detail/${props.companyName}`]
-    history.pushState({ title: title, url: url }, title, url)
+export default (props: { setCompany: (companyName: string) => any, companyName: string }) => {
+    // const [title, url] = [`${props.companyName}`, `/detail/${props.companyName}`]
+    // history.pushState({ title: title, url: url }, title, url)
     return (<div style={pageStyle}>
-        <h2>{decodeURI(title)}</h2>
-        <SearchCompany decideCompany={(companyName: string) => props.setUrl(`/detail/${companyName}`)} />
+        <h2>{decodeURI(props.companyName)}</h2>
+        <SearchCompany decideCompany={(companyName: string) => props.setCompany(companyName)} />
         <CompanyChart companyName={props.companyName} />
+        <CompanyNews companyName={props.companyName} />
     </div>)
 }
 
