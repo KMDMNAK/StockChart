@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { hot } from 'react-hot-loader/root'
-import { searchCompanyName } from '../modules/firestore'
+import { searchCompanyName } from '../firebase'
 
 type PredictHandlerState = { inputWord: string, predictValues: string[] }
 const PredictContext = React.createContext({ inputWord: '', predictValues: [] } as PredictHandlerState)
