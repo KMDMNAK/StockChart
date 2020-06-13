@@ -10,7 +10,9 @@
     },
     "dependencies": {
         "express": "^4.17.1",
-        "morgan": "^1.10.0"
+        "morgan": "^1.10.0",
+        "node-fetch": "^2.6.0",
+        "x2js": "^3.4.0"
     },
     "scripts": {
         "dev": "ts-node-dev --respawn --transpileOnly ./src/index.ts"
