@@ -1,6 +1,6 @@
 import React, { useEffect, useState, Children } from 'react'
 import { hot } from 'react-hot-loader/root'
-import { signIn } from '../firebase'
+
 const data = async () => await fetch('/api/').then(e => e.text())
 const Header = (props: { children?: JSX.Element }) => {
     const [state, setState] = useState('')
@@ -10,10 +10,9 @@ const Header = (props: { children?: JSX.Element }) => {
         })
     }, [state])
     return (<div>
-        Stock Analysis!
-        {state}
-        {props.children}
-        <div style={{ width: 300, height: 200, backgroundColor: 'red' }} onClick={signIn}></div>
+        <div style={{ width: "100%", height: 60 }}>
+            {props.children}
+        </div>
     </div>)
 }
 
