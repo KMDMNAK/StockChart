@@ -1,8 +1,8 @@
 const path = require('path')
 const webpack = require('webpack')
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
-const ts_rule = require('./ts_rule')
-const rules = [ts_rule]
+const rules = require('./rules')
+    // const rules = [ts_rule]
 const htmlPlugins = require('./html')
 
 const isDevelopment = true
