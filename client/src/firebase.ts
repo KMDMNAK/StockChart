@@ -5,14 +5,21 @@ import { REGISTER_COMPANY_REF, USER_REF, DAILY_UPCOMPANY_DOCREF, DAILY_DOWNCOMPA
 export const fstore = firebase.firestore()
 export const upCompaniesRef = fstore.collection(DAILY_REF).doc(DAILY_UPCOMPANY_DOCREF)
 export const downCompaniesRef = fstore.collection(DAILY_REF).doc(DAILY_DOWNCOMPANY_DOCREF)
+
+export const getCurrentUserName = () => {
+    const currentUser = firebase.auth().currentUser
+    if (!currentUser) return "";
+    return currentUser.displayName
+}
+
 export const getUid = () => {
     const currentUser = firebase.auth().currentUser
-    if (!currentUser) return;
+    if (!currentUser) return null;
     return currentUser.uid
 }
 export const signIn = () => {
     const provider = new firebase.auth.GoogleAuthProvider();
-    firebase.auth().signInWithPopup(provider).then(async result => {
+    return firebase.auth().signInWithPopup(provider).then(async result => {
         if (!result.credential) return
         const credentialObject = result.credential.toJSON();
         console.debug(credentialObject)
@@ -20,6 +27,9 @@ export const signIn = () => {
         if (!user) console.error({ user })
     })
 }
+
+export const singOut = () => firebase.auth().signOut()
+
 export const registerCompany = async (companyName: string, type: "liked" | "watched") => {
     const uid = getUid()
     if (!uid) throw Error('No Uid')
