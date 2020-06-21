@@ -1,7 +1,6 @@
 {
     "data": {
-        "getTopAssistances": [
-            {
+        "getTopAssistances": [{
                 "code": "3407",
                 "name": "\u65ed\u5316\u6210",
                 "original_name": "\u65ed\u5316\u6210"
@@ -20,7 +19,7 @@
                 "code": "4503",
                 "name": "アステラス製薬",
                 "original_name": "アステラス製薬"
-              },
+            },
             {
                 "code": "6857",
                 "name": "\u30a2\u30c9\u30d0\u30f3\u30c6\u30b9\u30c8",
@@ -30,11 +29,6 @@
                 "code": "6754",
                 "name": "\u30a2\u30f3\u30ea\u30c4",
                 "original_name": "\u30a2\u30f3\u30ea\u30c4"
-            },
-            {
-                "code": "9433",
-                "name": "\uff2b\uff24\uff24\uff29",
-                "original_name": "\u30a4\u30aa\u30f3"
             },
             {
                 "code": "5019",
@@ -50,7 +44,7 @@
                 "code": "3990",
                 "name": "ＵＵＵＭ",
                 "original_name": "UUUM"
-              },
+            },
             {
                 "code": "5201",
                 "name": "\uff21\uff27\uff23",
@@ -320,7 +314,7 @@
                 "code": "2432",
                 "name": "ディー・エヌ・エー",
                 "original_name": "ディーエヌエー"
-              },
+            },
             {
                 "code": "6762",
                 "name": "\uff34\uff24\uff2b",
@@ -355,11 +349,6 @@
                 "code": "8766",
                 "name": "\u6771\u4eac\u6d77\u4e0a\u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9",
                 "original_name": "\u6771\u4eac\u6d77\u4e0a \u30db\u30fc\u30eb\u30c7\u30a3\u30f3\u30b0\u30b9"
-            },
-            {
-                "code": "7751",
-                "name": "\u30ad\u30e4\u30ce\u30f3",
-                "original_name": "\u6771\u829d"
             },
             {
                 "code": "9602",
@@ -555,7 +544,7 @@
                 "code": "8306",
                 "name": "三菱ＵＦＪフィナンシャル・グループ",
                 "original_name": "三菱UFJ"
-              },
+            },
             {
                 "code": "6981",
                 "name": "\u6751\u7530\u88fd\u4f5c\u6240",
@@ -595,7 +584,7 @@
                 "code": "7272",
                 "name": "ヤマハ発動機",
                 "original_name": "ヤマハ発動機"
-              },
+            },
             {
                 "code": "8113",
                 "name": "\u30e6\u30cb\u30fb\u30c1\u30e3\u30fc\u30e0",
@@ -630,6 +619,16 @@
                 "code": "7564",
                 "name": "\u30ef\u30fc\u30af\u30de\u30f3",
                 "original_name": "\u30ef\u30fc\u30af\u30de\u30f3"
+            },
+            {
+                "code": "8267",
+                "name": "イオン",
+                "original_name": "イオン"
+            },
+            {
+                "code": "6502",
+                "name": "東芝",
+                "original_name": "東芝"
             }
         ]
     }
