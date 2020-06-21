@@ -2,7 +2,6 @@ import { initializeApp } from '../firebase'
 import { firestore } from 'firebase-admin'
 import kabutanCode from '../kabutanCode.json'
 import { COMPANY_REF, COMPANY_DATA_REF } from '../constants'
-import { FirestoreQuery } from '../@types/firestore'
 initializeApp()
 const fstore = firestore()
 
@@ -17,6 +16,7 @@ const updateLastDate = async () => {
             .collection(COMPANY_DATA_REF)
             .orderBy('Date', 'desc').limit(1).get()
         const latestDoc = dataDoc.docs[0]
+        if (!latestDoc) return
         //const date = (latestDoc.data().Date as FirebaseFirestore.Timestamp).toDate()
         await fstore
             .collection(COMPANY_REF)
@@ -24,3 +24,4 @@ const updateLastDate = async () => {
             .set({ lastDate: latestDoc.id })
     })
 }
+updateLastDate()

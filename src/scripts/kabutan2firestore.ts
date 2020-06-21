@@ -5,9 +5,12 @@ import { initializeApp } from '../firebase'
 import { firestore } from 'firebase-admin'
 import kabutanCode from '../kabutanCode.json'
 import { COMPANY_REF, COMPANY_DATA_REF } from '../constants'
+import { writeFileSync, promises } from 'fs'
+import { Kabutan } from '../../@types/kabutan'
 
 initializeApp()
 const fstore = firestore()
+
 // localにあるjsonファイルのデータをfirestoreにupdate
 const column2firestore = () => {
     const batch = fstore.batch()
@@ -22,8 +25,8 @@ const column2firestore = () => {
         console.error("Errored", e)
     })
 }
-import { Kabutan } from '../../@types/kabutan'
-import { promises } from 'fs'
+
+
 
 const data2firestore = async () => {
     const jsonDataPath = './data'
@@ -50,4 +53,27 @@ const data2firestore = async () => {
 };
 
 
-data2firestore()
+// kabutanCodeをcompanyRefに登録する。
+const kabutanCode2firestore = async () => {
+    const companyRef = await fstore.collection(COMPANY_REF)
+    const yetToBeWritten = [] as { code: string, original_name: string, name: string }[]
+    await Promise.all(kabutanCode.data.getTopAssistances.map(async item => {
+        const snapshot = await companyRef.doc(item.original_name).get()
+        if (!snapshot.exists) {
+            return yetToBeWritten.push(item)
+        }
+        const { kabutanCode } = snapshot.data() as { kabutanCode: string | undefined }
+        if (kabutanCode) return
+        await snapshot.ref.set({ kabutanCode: item.code }, { merge: true })
+    }))
+    writeFileSync('yetToBeWritten.json', JSON.stringify(yetToBeWritten))
+}
+
+
+const [_, __, command] = process.argv
+console.debug({ command })
+if (command === 'local') {
+    data2firestore()
+} else if (command === 'code') {
+    kabutanCode2firestore()
+}

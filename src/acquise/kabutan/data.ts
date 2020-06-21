@@ -4,13 +4,25 @@ import execAll from 'execall'
 
 const columnCorrespond: { [key: string]: string } = {
     日付: "Date",
-    始値: "OR",
+    始値: "OP",
     高値: "HP",
     安値: "LP",
-    終値: "CR",
+    終値: "CP",
     前日比: "DoD",
     "前日比％": "DoDP",
     "売買高(株)": "Rev"
+}
+
+export type KabutanDataColumns = {
+    "Date": string
+    "OP": number
+    "HP": number
+    "LP": number
+    "CP": number
+    "DoD": number
+    "DoDP": number
+    "Rev": number
+
 }
 
 const HEADER = {
@@ -47,7 +59,7 @@ type DateType = 'day' | 'wek' | 'shin' | 'mon' | 'yar'
 export const getStockData = async (code: string, type: DateType, page: Number) => {
     const actualPage = page !== -1 ? page : 0
     const tableText = await getStockChartTable(code, type, actualPage)
-    return extractData(tableText);
+    return extractData(tableText) as KabutanDataColumns[];
 }
 
 const getStockChartTable = async (code: string, type: string, page: Number) => {
@@ -72,6 +84,7 @@ const createColumn = (firstTrs: execAll.Match) => {
     if (each_data === null) throw Error('No match');
     return each_data.map((each_match: execAll.Match) => each_match.subMatches[0])
 }
+
 const extractData = (tableText: string) => {
     const trs = execAll(TR_PATTERN, tableText)
     if (trs === null) throw Error("no match in tr error");
