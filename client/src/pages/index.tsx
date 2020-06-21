@@ -10,6 +10,7 @@ import {
 import { page } from '../utils'
 
 import DailyCompany from '../component/DailyCompany'
+
 const Detail = React.lazy(() => import('./detail'));
 
 /**
@@ -17,9 +18,9 @@ const Detail = React.lazy(() => import('./detail'));
  * webpack dev server : historyApiFallback : index.html
  */
 
-const Index = (props: { clickCompany: (companyName: string) => any }) => {
-    return <DailyCompany wantDate={'2019-09-20'} clickCompanyName={props.clickCompany} />
-}
+
+const Index = (props: { clickCompany: (companyName: string) => any }) => <DailyCompany clickCompanyName={props.clickCompany} />
+
 
 const RouteIndex = withRouter((props: {}) => {
     const history = useHistory()
