@@ -15,7 +15,8 @@ let original_data: FirestoreQuery.CompanyData[] | null = null
 const createOption = (companyName: string, data: { name: string, value: any[] }[]) => {
     return {
         title: {
-            text: companyName
+            // text: companyName
+            text: ''
         },
         tooltip: {
             trigger: 'axis',
@@ -59,7 +60,7 @@ const CompanyDataHandler = (props: { companyName: string, children: JSX.Element 
     if (companyDataState.loading) {
         companyDataRef(props.companyName).get().then(snapshot => {
             console.debug('CompanyDataHandler', 'Get Datas from firestore.')
-            const data = snapshot.docs.slice(-50).map(doc => doc.data() as FirestoreQuery.CompanyData)
+            const data = snapshot.docs.slice(-30).map(doc => doc.data() as FirestoreQuery.CompanyData)
             if (data.length === 0) console.warn(`No data is for ${props.companyName}`)
             setCompanyDataState({ loading: false, data, companyName: props.companyName })
         })
@@ -75,7 +76,7 @@ const CompanyDataHandler = (props: { companyName: string, children: JSX.Element 
 const AttrContext = React.createContext('DoD')
 const AttrButton = (props: { children: JSX.Element }) => {
     const [attr, setAttr] = useState('DoD')
-    const attrChoice = ['CR', 'DoD', 'DoDP', 'HP', 'LP', 'OR', 'Rev']
+    const attrChoice = ['CP', 'DoD', 'DoDP', 'HP', 'LP', 'OP', 'Rev']
     console.debug('AttrButtonZ', { attr })
     return (<>
         {attrChoice.map(eachAttr => (< button key={eachAttr} onClick={() => { setAttr(eachAttr) }}>{eachAttr}</button>))}
@@ -87,7 +88,8 @@ const AttrButton = (props: { children: JSX.Element }) => {
 const createChartData = (data: FirestoreQuery.CompanyData[], attr: string) => data.map((eachData: any) => {
     return {
         name: eachData.Date.toDate(),
-        value: [eachData.Date.toDate().toLocaleString(), eachData[attr]]
+        value: [(new Intl.DateTimeFormat('ja-JP')).format(eachData.Date.toDate()), eachData[attr]]
+        
     }
 })
 export const Chart = () => {
