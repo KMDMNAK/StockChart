@@ -16,7 +16,7 @@ app.get('/', (req, res, next) => {
 app.get('/api/news/:companyName/:startDateStr/:endDateStr', async (req, res) => {
     const { companyName, startDateStr, endDateStr } = req.params
     console.debug({ companyName, startDateStr, endDateStr })
-    const url = `https://news.google.com/rss/search?q=${encodeURI(companyName)}+before:${endDateStr}+after:${startDateStr}&hl=ja&gl=JP&ceid=JP:ja`
+    const url = `https://news.google.com/rss/search?q=${encodeURI(companyName+"%20株")}+before:${endDateStr}+after:${startDateStr}&hl=ja&gl=JP&ceid=JP:ja`
     console.debug({ url })
     await fetch(url).then(v => v.text())
         .then(xml => res.send(x2jso.xml2js(xml)))
