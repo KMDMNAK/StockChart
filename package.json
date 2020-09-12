@@ -20,7 +20,7 @@
     "dependencies": {
         "execall": "^2.0.0",
         "firebase-admin": "^8.10.0",
-        "node-fetch": "2.1.2"
+        "node-fetch": "2.6.1"
     },
     "jest": {
         "moduleFileExtensions": [
